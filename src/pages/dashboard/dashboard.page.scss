@@ -1,0 +1,53 @@
+ion-col{
+    display: flex; 
+    justify-content: center
+}
+.profile-grid{
+    background-color: #143C5A   
+}
+.segment-grid{
+    background-color: #ffc61a  
+}
+.lbl-prof-color{
+    color: white;
+}
+ion-segment{
+    color: #143C5A;
+    height: 100px;
+}
+.segment-img{
+    width: 40%;
+    height: 40%;
+}
+.item-coverage{
+    height: 40px;
+    font-size: 23px;
+    font-weight: bold
+}
+.policy-img{
+    width: 90%;
+    height: 80%; 
+}
+.card-icon{
+    color: #ffc61a;
+}
+.lblCard-style{
+    color: #143C5A;
+    font-weight: bold;
+}
+.fund-lblStyle{
+    font-weight: bold;
+}
+.assets-style{
+    font-size: 30px;
+}
+ion-card{
+    width: 100%;
+    border-radius: 25px;
+}
+ion-item{
+    width: 100%;
+}
+ion-list{
+    width: 100%;
+}

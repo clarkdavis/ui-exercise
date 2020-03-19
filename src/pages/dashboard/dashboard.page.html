@@ -1,0 +1,276 @@
+<ion-toolbar color="translucent">
+  <ion-buttons slot="start">
+    <ion-button fill="clear">
+      <ion-icon slot="start" name="reorder-two-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button fill="clear">
+      <ion-icon slot="end" name="notifications-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<!-- 143C5A -->
+<ion-content>
+  <ion-grid class="profile-grid">
+    <ion-row>
+      <ion-col>
+        <ion-avatar>
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label class="lbl-prof-color">Good Afternoon</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label class="lbl-prof-color">Monforte, Clark Davis</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="segment-grid">
+    <ion-row>
+      <ion-col>
+        <ion-segment [(ngModel)]="whichComponent">
+          <ion-segment-button value="funds">
+            <ion-img src="/assets/icon/fund.png" class="segment-img"></ion-img>
+            <ion-label>Manage ILAS Funds</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="claims">
+            <ion-img src="/assets/icon/claims.png" class="segment-img"></ion-img>
+            <ion-label>Claims</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="policy">
+            <ion-img src="/assets/icon/policy.png" class="segment-img"></ion-img>
+            <ion-label>Policy Servicing</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div [ngSwitch]="whichComponent">
+    <ion-list *ngSwitchCase="'funds'">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item detail lines="none" class="item-coverage" [routerLink]="['/policydetails']">
+              <ion-label class="fund-lblStyle">
+                Coverage from 4 Policies
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item lines="none" text-center>
+                <ion-img src="/assets/icon/fitness_7-512.png" class="policy-img"></ion-img>
+              </ion-item>
+              <ion-item lines="none" text-center>
+                <ion-row>
+                  <ion-col>
+                    <ion-label class="fund-lblStyle">Life</ion-label>
+                  </ion-col>
+                  <ion-col>
+                    <ion-label>HKD 6,146,066</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+            <ion-list>
+              <ion-item lines="none" text-center>
+                <ion-img src="/assets/icon/illness.png" class="policy-img"></ion-img>
+              </ion-item>
+              <ion-item lines="none" text-center>
+                <ion-row>
+                  <ion-col>
+                    <ion-label class="fund-lblStyle">Critical Illness</ion-label>
+                  </ion-col>
+                  <ion-col>
+                    <ion-label>up to HKD 1,000,000</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item lines="none" text-center>
+                <ion-img src="/assets/icon/medical.png" class="policy-img"></ion-img>
+              </ion-item>
+              <ion-item lines="none" text-center>
+                <ion-row>
+                  <ion-col>
+                    <ion-label class="fund-lblStyle">Medical & Hosp</ion-label>
+                  </ion-col>
+                  <ion-col>
+                    <ion-label text-wrap>up to:HKD 721,800/year, HKD 600,000/disability</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+          <ion-col>
+            <ion-list>
+              <ion-item lines="none" text-center>
+                <ion-img src="/assets/icon/accident.png" class="policy-img"></ion-img>
+              </ion-item>
+              <ion-item lines="none" text-center>
+                <ion-row>
+                  <ion-col>
+                    <ion-label class="fund-lblStyle">Accident</ion-label>
+                  </ion-col>
+                  <ion-col>
+                    <ion-label>up to HKD 1,000,000</ion-label>
+                  </ion-col>
+                </ion-row>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>*Additional coverages detailed in provision</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-item>
+              <ion-label class="fund-lblStyle">Assets</ion-label>
+              <ion-label class="fund-lblStyle">Total HKD 255,309</ion-label>
+            </ion-item>
+
+            <ion-row>
+              <ion-col>
+               <ion-list>
+                <ion-item detail lines="none">
+                  <ion-label>Investment Linked</ion-label>
+                  <ion-label class="fund-lblStyle">HKD 10,539</ion-label>
+                </ion-item>
+                <ion-item detail lines="none">
+                  <ion-label text-center>Savings</ion-label>
+                  <ion-label class="fund-lblStyle">HKD 161,688</ion-label>
+                </ion-item>
+               </ion-list>
+              </ion-col>
+            </ion-row>
+            <!-- <ion-card-content>
+              <ion-item detail lines="none">
+                <ion-label>
+                  Investment Linked
+                </ion-label>
+                <ion-label>
+                  Investment Linked
+                </ion-label>
+              </ion-item>
+            </ion-card-content> -->
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+      <!-- <ion-grid style="border-radius: 25px; border-top: 2px gray solid; ">
+        <ion-row>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-label class="assets-style">Assets:</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none">
+              <ion-label class="fund-lblStyle">Total: HKD 255,309</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+              <ion-item-divider>
+                <ion-label></ion-label>
+              </ion-item-divider>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+    </ion-list>
+    <ion-list *ngSwitchCase="'claims'">
+      <ion-item>Claims</ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'policy'">
+      <ion-card>
+        <ion-item>
+          <ion-icon name="copy-outline" slot="start" class="card-icon"></ion-icon>
+          <ion-label>Move value from one policy to another</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Pay with Policy Value
+            </ion-label>
+          </ion-item>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Standing Instructions
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="copy-outline" slot="start" class="card-icon"></ion-icon>
+          <ion-label>Cash out your policy values</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Value Withdrawal
+            </ion-label>
+          </ion-item>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Payment Method
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="copy-outline" slot="start" class="card-icon"></ion-icon>
+          <ion-label>Take a loan against your policy value</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Loans
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-icon name="copy-outline" slot="start" class="card-icon"></ion-icon>
+          <ion-label>Payment options for your premiums</ion-label>
+        </ion-item>
+
+        <ion-card-content>
+          <ion-item detail lines="none">
+            <ion-label class="lblCard-style">
+              Premium Payment Method
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
